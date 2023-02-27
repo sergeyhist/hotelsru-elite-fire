@@ -1,0 +1,17 @@
+@use 'assets/variables' as vars;
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  gap: 30px;
+
+  & > div {
+    flex: 1 1 30%;
+    background: vars.$bg-alt;
+    border-radius: 2px;
+    aspect-ratio: 4/3;
+    min-width: 250px;
+  }
+}

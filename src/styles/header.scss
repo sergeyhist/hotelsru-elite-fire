@@ -1,0 +1,66 @@
+@use 'assets/variables' as vars;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 5%;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  &__left {
+    display: flex;
+    gap: 39px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__right {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__button {
+    position: relative;
+
+    & > div:nth-of-type(1) {
+      position: absolute;
+      width: 150%;
+      height: 150%;
+      top: -25%;
+      left: -25%;
+      background: rgba(201, 115, 53, 0.68);
+      filter: blur(50px);
+      border-radius: 500px;
+      transform: rotate(-180deg);
+      opacity: 0.5;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    gap: 50px;
+    font-size: 13px;
+    text-transform: uppercase;
+    flex-wrap: wrap;
+
+    & > a {
+      color: vars.$gray;
+
+      &:hover {
+        color: vars.$yellow;
+      }
+    }
+  }
+
+  &__headline {
+    font-size: 20px;
+  }
+
+  &__description {
+    color: vars.$gray-alt-3;
+    font-size: 12px;
+  }
+}

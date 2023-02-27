@@ -1,0 +1,22 @@
+@use 'assets/variables' as vars;
+
+.slideshow {
+  position: relative;
+  background: vars.$bg-alt;
+  width: 100%;
+  min-width: 250px;
+  aspect-ratio: 3/2;
+  border-radius: 2px;
+
+  & > div {
+    position: absolute;
+    bottom: 10%;
+    left: 9%;
+    display: flex;
+    gap: 16px;
+  }
+
+  & button {
+    background: transparent;
+  }
+}

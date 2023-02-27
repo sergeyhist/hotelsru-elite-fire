@@ -1,0 +1,67 @@
+@use 'assets/variables' as vars;
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  background: #eccf94;
+  border-radius: 2px;
+  position: relative;
+  overflow: clip;
+
+  & div {
+    position: absolute;
+  }
+
+  &__gradient {
+    width: 130%;
+    height: 360%;
+
+    & > div {
+      width: 50%;
+      height: 50%;
+    }
+
+    & > div:nth-of-type(1) {
+      top: 0;
+      right: 0;
+      background: linear-gradient(
+        270.21deg,
+        rgba(255, 217, 196, 0.8) 18.08%,
+        rgba(255, 255, 255, 0.8) 68.72%
+      );
+      filter: blur(25px);
+      transform: matrix(-1, 0, 0, 1, 0, 0);
+    }
+
+    & > div:nth-of-type(2) {
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(
+        270.21deg,
+        rgba(249, 139, 77, 0.8) 18.08%,
+        rgba(255, 103, 82, 0.8) 68.72%,
+        rgba(255, 103, 82, 0.8) 68.72%
+      );
+      filter: blur(25px);
+    }
+  }
+
+  &__image,
+  &__text {
+    z-index: 1;
+  }
+
+  &__image {
+    height: 18px;
+    aspect-ratio: 1;
+  }
+
+  &__text {
+    color: black;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 500;
+  }
+}

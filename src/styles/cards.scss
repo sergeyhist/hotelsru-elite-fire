@@ -1,0 +1,53 @@
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__text {
+    color: white;
+  }
+
+  &__icon {
+    width: 30px;
+  }
+
+  &_vertical {
+    gap: 80px;
+
+    & > .cards__card {
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+    }
+
+    & > .cards__text {
+      font-size: 14px;
+    }
+  }
+
+  &_horizontal {
+    justify-content: space-around;
+    gap: 30px;
+    width: 85%;
+
+    & > .cards__card {
+      text-align: start;
+      gap: 30px;
+    }
+
+    & > .cards__text {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .cards {
+    justify-content: space-around;
+  }
+}

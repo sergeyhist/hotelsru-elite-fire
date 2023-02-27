@@ -1,0 +1,99 @@
+@use 'assets/variables' as vars;
+
+.footer {
+  background: vars.$bg-alt;
+
+  & > h2 {
+    padding: 72px 5% 0 5%;
+  }
+
+  & > div:nth-of-type(1) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    justify-content: space-between;
+    padding: 71px 5% 66px 5%;
+    border-bottom: 1px solid vars.$line;
+
+    & span {
+      font-family: 'LabGrotesqueLight';
+    }
+
+    & a {
+      color: vars.$yellow;
+    }
+
+    & > div:nth-of-type(1) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 71px;
+      flex-basis:60%;
+
+      & > div {
+        display: flex;
+        gap: 15px;
+        flex-direction: column;
+        flex-basis: 40%;
+      }
+    }
+
+    & > div:nth-of-type(2) {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      & > div {
+        display: flex;
+        flex-direction: column;
+        gap: 61px;
+      }
+    }
+  }
+
+  & > div:nth-of-type(2) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 40px 5%;
+    gap: 20px;
+
+    & > a {
+      flex: 1 1 50%;
+      text-align: right;
+    }
+
+    & > span:not(:nth-of-type(1)), & > a {
+      @extend .footer__title;
+      letter-spacing: 0.05em;
+    }
+  }
+
+  &__headline {
+    font-size: 14px;
+    flex-basis: 15%;
+  }
+
+  &__title {
+    color: vars.$gray;
+    font-size: 14px;
+  }
+
+  &__text {
+    color: white;
+    font-size: 22px;
+    white-space: nowrap;
+  }
+
+  &__link {
+    color: vars.$yellow;
+  }
+  
+  &__button {
+    border: 1px solid vars.$yellow;
+    padding-inline: 28px 33px;
+    height: 60px;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+  }
+}

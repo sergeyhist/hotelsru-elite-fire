@@ -1,0 +1,40 @@
+@use 'assets/variables' as vars;
+
+.selector {
+  display: grid;
+  grid-template-areas: "prev image next" "indicator indicator indicator";
+  justify-content: center;
+  row-gap: 18px;
+  column-gap: 22px;
+
+  &__prev {
+    grid-area: prev;
+  }
+
+  &__next {
+    grid-area: next;
+  }
+
+  &__image {
+    grid-area: image;
+    width: fit-content;
+  }
+
+  &__indicator {
+    grid-area: indicator;
+    display: flex;
+    gap: 4px;
+    height: 1px;
+    justify-content: center;
+  }
+
+  &__element {
+    width: 9px;
+    height: 100%;
+    background: vars.$gray-alt-2;
+
+    &_active {
+      background: vars.$yellow;
+    }
+  }
+}

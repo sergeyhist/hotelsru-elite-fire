@@ -1,0 +1,463 @@
+@use 'assets/variables' as vars;
+
+.main {
+  padding: 60px 5%;
+
+  &__section:nth-child(1) {
+    & .main__group {
+      margin-left: -20%;
+
+      & .image:nth-of-type(1) {
+        position: absolute;
+        z-index: -1;
+        opacity: .5;
+        top: -20%;
+      }
+    }
+
+    & .price {
+      margin-top: 29px;
+    }
+
+    & .cards {
+      margin-top: 86px;
+    }
+
+    & > .shadow {
+      position: absolute;
+      opacity: .5;
+      z-index: -1;
+    }
+
+    & > .shadow:nth-of-type(1) {
+      top: 0;
+      right: 0;
+    }
+
+    & > .shadow:nth-of-type(2) {
+      top: 0;
+      left: 0;
+    }
+
+    & > div {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 50px;
+    }
+  }
+
+  &__section:nth-child(2) {
+    margin-top: 223px;
+    display: grid;
+    gap: 20px;
+    justify-items: center;
+    text-align: center;
+
+    & .main__group {
+      & > .image:nth-of-type(1) { 
+        position: absolute;
+        z-index: -1;
+        top: -65%;
+      }
+    }
+
+    & > div {
+      position: relative;
+    }
+  }
+
+  &__section:nth-child(3) {
+    margin-top: 200px;
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    margin-inline: 10%;
+    position: relative;
+
+    & .shadow {
+      position: absolute;
+      top: -700px;
+      left: -20%;
+      z-index: -1;
+    }
+
+    & .main__group {
+      z-index: -1;
+
+      & > .image:nth-of-type(1) {
+        position: absolute;
+      }
+    }
+
+    & > div:nth-of-type(1) {
+      position: relative;
+    }
+
+    & > div:nth-of-type(2) {
+      position: relative;
+      margin-top: -25%;
+      height: fit-content;
+
+      & > div:not(:last-child) {
+        position: absolute;
+      }
+
+      & > div:nth-of-type(1) {
+        top: 28%;
+        left: 60%;
+        background: radial-gradient(
+          100% 65.98% at 100% 73.18%,
+          #ffffff 0.31%,
+          #ffe2a4 59.23%,
+          #ffd47c 100%
+        );
+        width: 18%;
+        height: 18%;
+        min-width: 110px;
+        min-height: 110px;
+        border-radius: 50%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        & span {
+          font-family: "ScaniaSansCY";
+        }
+
+        & > span:nth-of-type(1) {
+          font-weight: bold;
+          line-height: 20px;
+
+          & > span:nth-of-type(1) {
+            font-size: 36px;
+          }
+
+          & > span:nth-of-type(2) {
+            font-size: 14px;
+          }
+        }
+
+        & > span:nth-of-type(2) {
+          font-size: 10px;
+          line-height: 14px;
+        }
+      }
+
+      & > div:nth-of-type(2) {
+        width: 10%;
+        height: 10%;
+        border: 1px solid #ffcf7a;
+        border-radius: 50%;
+        bottom: 42%;
+        left: 29.5%;
+      }
+
+      & > div:nth-of-type(3) {
+        width: 20%;
+        height: 20%;
+        border: 2px solid #ffcf7a;
+        border-radius: 50%;
+        bottom: 25%;
+        left: 39%;
+      }
+
+      & > div:nth-of-type(4) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+        align-items: center;
+        top: 75%;
+        right: 40%;
+
+        & > img {
+          width: 20px;
+          height: 20px;
+        }
+
+        & > p {
+          flex-basis: 100%;
+          font-size: 14px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+
+  &__section:nth-child(4) {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    gap: 30px;
+    margin-top: 100px;
+
+    & > h2 {
+      display: flex;
+      gap: 50px;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    & > .image {
+      margin-top: -9%;
+      z-index: -2;
+    }
+  }
+
+  &__section:nth-child(5) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5%;
+
+    & > div {
+      flex: 1 1 40%;
+      margin-block: 50px;
+      display: grid;
+      align-content: space-between;
+    }
+
+    & h3 {
+      margin-bottom: 25px;
+    }
+
+    & p {
+      font-size: 14px;
+      line-height: 27px;
+    }
+
+    & > div:nth-of-type(1) {
+      & > h3 {
+        margin-top: 35px;
+      }
+
+      & > div:not(div:nth-of-type(1)) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      & > div:nth-of-type(1) {
+        position: relative;
+        margin-block: 45px 25px;
+
+        & > p,
+        & > svg {
+          position: absolute;
+        }
+
+        & > p {
+          top: -45px;
+        }
+
+        & > svg {
+          top: -20px;
+        }
+
+        & > .image {
+          z-index: -1;
+          position: relative;
+        }
+
+        & > .shadow {
+          position: absolute;
+          left: 25%;
+          opacity: 0.5;
+          width: 100%;
+          top: -10%;
+          z-index: -2;
+        }
+      }
+
+      & > div:nth-of-type(2) {
+        margin-block: 15px 70px;
+      }
+
+      & > div:nth-of-type(3) {
+        margin-top: 30px;
+      }
+    }
+
+    & > div:not(:nth-of-type(1)) {
+      & > div {
+        margin-top: 37px;
+      }
+    }
+  }
+
+  &__section:nth-child(6) {
+    display: grid;
+    justify-items: center;
+    gap: 35px;
+    margin-top: 100px;
+    position: relative;
+
+    & .shadow {
+      position: absolute;
+      z-index: -1;
+      top: -13vw;
+      left: 0;
+      width: 100%;
+    }
+
+    & > div:nth-of-type(1) {
+      width: 100%;
+      text-align: center;
+    }
+
+    & > div:nth-of-type(2) {
+      & > div {
+        position: absolute;
+        height: 335%;
+        width: 35%;
+        top: -90%;
+        z-index: -1;
+        left: 18%;
+        background: rgba(175, 152, 112, 0.34);
+        filter: blur(50px);
+        border-radius: 300px;
+        transform: matrix(0, 1, 1, 0, 0, 0);
+      }
+    }
+  }
+
+  &__section:nth-child(7) {
+    display: grid;
+    gap: 90px;
+    text-align: center;
+    margin-top: 100px;
+
+    & > div {
+      display: grid;
+      gap: 45px;
+    }
+  }
+
+  &__section:nth-child(8) {
+    display: grid;
+    gap: 67px;
+    text-align: center;
+    margin-top: 94px;
+    position: relative;
+
+    & > .shadow {
+      position: absolute;
+      top: -20%;
+      z-index: -1;
+      right: -10%;
+    }
+
+    & h4 {
+      text-align: start;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      line-height: 10px;
+    }
+
+    & > div:nth-of-type(1) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 80px;
+
+      & > img {
+        flex: 0 0 40%;
+      }
+
+      & > div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        flex: 1 1 40%;
+        justify-content: space-between;
+        gap: 20px;
+
+        & > div:not(:nth-of-type(1)) {
+          display: grid;
+          gap: 20px;
+        }
+
+        & > div:nth-of-type(2) {
+          justify-content: start;
+        }
+      }
+    }
+
+    & > div:nth-of-type(2) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+
+      & h4 {
+        letter-spacing: 0.135em;
+      }
+
+      & > div {
+        flex-basis: 20%;
+        display: grid;
+        justify-content: start;
+
+        & > div,
+        & > span {
+          margin-top: 17px;
+        }
+      }
+
+      & > div:nth-of-type(1) {
+        & > span {
+          color: white;
+          font-size: 24px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+
+  &__group {
+    position: relative;
+  }
+
+  &__blank {
+    width: 31px;
+    height: 0px;
+    border: 1px solid vars.$gray;
+  }
+  
+  &__checkbox-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    & > div {
+      display: grid;
+      flex-basis: 40%;
+      gap: 16px;
+    }
+  }
+
+  &__color {
+    width: 28px;
+    height: 28px;
+    background: #b8542a;
+    border-radius: 50%;
+  }
+}
+
+@media (max-width: 960px) {
+  .main {
+    &__section:nth-child(1) {
+      & > div {
+        grid-template-columns: 1fr;
+
+        & .main__group {
+          margin: 0;
+        }
+      }
+    }
+
+    &__section:nth-child(3) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

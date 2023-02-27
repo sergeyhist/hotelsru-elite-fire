@@ -1,0 +1,37 @@
+@use 'assets/variables' as vars;
+
+.checkbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  position: relative;
+
+  & > svg {
+    position: absolute;
+    right: 6px;
+    opacity: 0;
+
+    & > line {
+      stroke: vars.$black;
+      stroke-width: 1;
+      stroke-linecap: round;
+    }
+  }
+
+  & > input {
+    -webkit-appearance: none;
+    appearance: none;
+    border: 1px solid vars.$yellow;
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    outline: 0;
+
+    &:checked {
+      background: vars.$yellow;
+    }
+  }
+}
